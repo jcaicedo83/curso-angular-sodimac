@@ -1,0 +1,17 @@
+    <div class="card">
+        <div class="card-header">
+          <div class="card-title">Nuevo / Editar Estudiante</div>
+        </div>
+        <div class="card-body">
+          <input type="text" placeholder="Nombre completo" [(ngModel)]="estudiante.nombre">
+          <br>
+          <input type="date" [(ngModel)]="estudiante.cumpleanios" #fecha>
+          <br>
+          <input type="text" placeholder="email-address" *ngIf="GetEdad()>18;" [(ngModel)]="estudiante.email">
+          <!-- *ngIf="(anio ) >18 " -->
+          <br>
+          <input type="number" placeholder="mensualidad" [(ngModel)]="estudiante.mensualidad">
+          <br>
+           <button type="button" class="btn btn-sm btn-outline-primary" (click)="GuardarData();">Registrar / actualizar</button>
+        </div>
+      </div>

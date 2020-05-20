@@ -1,0 +1,14 @@
+<h1>Angular Sodimac</h1>
+
+<select name="sel-tipo" id="sel-tipo" [(ngModel)]="tipo">
+  <option value="A" selected>-- seleccione --</option>
+  <option value="T">Triangulo</option>
+  <option value="C">Cuadrado</option>
+</select>
+<br>
+<input type="number" [(ngModel)]="base"/>
+<input type="number" *ngIf="tipo!='C'" [(ngModel)]="altura"/>
+
+<button type="submit" (click)="calcular(base, altura)">Calcular suma</button>
+
+<p>el área de {{base}} y {{altura}} es {{var_c}}</p>
